@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { startListening, triggerVisaOverlay } from './actions';
+import { startListening, stopListening, triggerVisaOverlay } from './actions';
 
 function MicIcon() {
   return (
@@ -24,8 +24,13 @@ export function FloatingBar() {
   const [listening, setListening] = useState(false);
 
   const onMicClick = () => {
-    setListening((prev) => !prev);
-    startListening();
+    const next = !listening;
+    setListening(next);
+    if (next) {
+      startListening();
+    } else {
+      stopListening();
+    }
   };
 
   const onSimplifyClick = () => {

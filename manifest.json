@@ -5,6 +5,10 @@
   "description": "AuraVault — accessible voice-first checkout companion.",
   "permissions": ["activeTab", "scripting", "storage", "offscreen"],
   "host_permissions": ["<all_urls>", "http://localhost:3000/*"],
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

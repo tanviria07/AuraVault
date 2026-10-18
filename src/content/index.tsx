@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import cssText from './content.css?inline';
 import { FloatingBar } from './FloatingBar';
+import { initVoiceIntentListener } from './actions';
 
 const HOST_ID = 'auravault-floating-bar-host';
 
@@ -38,3 +39,4 @@ function mountFloatingBar(): void {
 }
 
 mountFloatingBar();
+initVoiceIntentListener();
