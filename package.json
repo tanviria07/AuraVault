@@ -1,0 +1,17 @@
+{
+  "name": "auravault",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AuraVault Chrome Extension",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json && cp -r public/. dist/"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.5",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.4"
+  }
+}
