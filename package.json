@@ -1,0 +1,23 @@
+{
+  "name": "auravault",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AuraVault Chrome Extension",
+  "scripts": {
+    "build": "tsc --noEmit && esbuild src/content/VisaCheckout.tsx --bundle --format=iife --jsx=automatic --outfile=dist/VisaCheckout.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.4"
+  }
+}
