@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "AuraVault",
+  "version": "0.1.0",
+  "description": "AuraVault — accessible voice-first checkout companion.",
+  "permissions": ["activeTab", "scripting", "storage", "offscreen"],
+  "host_permissions": ["<all_urls>", "http://localhost:3000/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/index.tsx"],
+      "run_at": "document_idle"
+    }
+  ]
+}
